@@ -1,6 +1,4 @@
-* {
-    box-sizing: border-box;
-}
+* { box-sizing: border-box; }
 
 body {
     min-height: 100vh;
@@ -23,63 +21,52 @@ body {
     border-bottom: 1px solid #dce3ec;
 }
 
-.logo {
-    width: 280px;
-    display: block;
-}
-
-.logo img {
-    width: 100%;
-    height: auto;
-    display: block;
-}
+.logo { width: 280px; display: block; }
+.logo img { width: 100%; display: block; }
 
 .page-header h1 {
     margin: 0;
     text-align: center;
     font-size: 28px;
-    font-weight: 700;
 }
 
 .page-main {
     flex: 1;
     display: grid;
     place-items: center;
-    padding: 48px 20px;
+    padding: 44px 20px;
 }
 
-.hello-card {
+.panel {
     width: min(100%, 680px);
-    padding: 36px;
+    padding: 34px;
+    text-align: center;
     background: #ffffff;
     border: 1px solid #dce3ec;
     border-radius: 8px;
     box-shadow: 0 18px 44px rgba(31, 42, 68, 0.08);
-    text-align: center;
 }
 
-.eyebrow {
+.label {
     margin: 0 0 12px;
-    color: #56657a;
+    color: #64748b;
     font-size: 14px;
+    font-weight: 700;
     text-transform: uppercase;
 }
 
-.hello-card h2 {
-    margin: 0 0 18px;
+h2 {
+    margin: 0 0 20px;
     color: #ef3124;
     font-size: 40px;
 }
 
-.hello-card p {
-    margin: 12px 0;
-    font-size: 18px;
-    line-height: 1.5;
-}
+p { font-size: 18px; line-height: 1.5; }
 
 button {
-    margin-top: 20px;
-    padding: 12px 22px;
+    min-height: 44px;
+    margin-top: 12px;
+    padding: 12px 20px;
     color: #ffffff;
     background: #202124;
     border: 0;
@@ -88,38 +75,23 @@ button {
     cursor: pointer;
 }
 
-button:hover {
-    background: #ef3124;
-}
+button:hover { background: #ef3124; }
 
 .page-footer {
     padding: 22px;
     color: #ffffff;
     background: #202124;
     text-align: center;
-    font-size: 16px;
 }
 
-@media (max-width: 760px) {
+@media (max-width: 820px) {
     .page-header {
         grid-template-columns: 1fr;
         justify-items: center;
         padding: 18px;
     }
 
-    .logo {
-        width: min(100%, 320px);
-    }
-
-    .page-header h1 {
-        font-size: 22px;
-    }
-
-    .hello-card {
-        padding: 28px 18px;
-    }
-
-    .hello-card h2 {
-        font-size: 30px;
-    }
+    .logo { width: min(100%, 320px); }
+    .page-header h1 { font-size: 22px; }
+    h2 { font-size: 30px; }
 }

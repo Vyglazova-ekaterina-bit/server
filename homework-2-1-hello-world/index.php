@@ -1,6 +1,7 @@
 <?php
 session_start();
 
+$title = 'Домашняя работа: Hello, World!';
 $greetings = [
     'Hello, World!',
     'Привет, мир!',
@@ -8,29 +9,28 @@ $greetings = [
     'Московский Политех приветствует вас!'
 ];
 
-$currentGreeting = $greetings[array_rand($greetings)];
-
+$greeting = $greetings[array_rand($greetings)];
 ?>
 <!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Домашняя работа: Hello, World!</title>
+    <title><?php echo $title; ?></title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header class="page-header">
-        <div class="logo" aria-label="Логотип МосПолитеха">
+        <a class="logo" href="hello-world.php" aria-label="Московский Политех">
             <img src="mospolytech-logo.png" alt="Московский Политех">
-        </div>
-        <h1>Домашняя работа: Hello, World!</h1>
+        </a>
+        <h1><?php echo $title; ?></h1>
     </header>
 
     <main class="page-main">
-        <section class="hello-card">
-            <p class="eyebrow">Динамический контент на PHP</p>
-            <h2><?php echo htmlspecialchars($currentGreeting); ?></h2>
+        <section class="panel">
+            <p class="label">Динамический контент на PHP</p>
+            <h2><?php echo htmlspecialchars($greeting); ?></h2>
             <form method="post">
                 <button type="submit">Обновить приветствие</button>
             </form>
