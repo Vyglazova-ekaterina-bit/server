@@ -1,0 +1,125 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    color: #202124;
+    background: #f4f7fb;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.page-header {
+    min-height: 92px;
+    display: grid;
+    grid-template-columns: 300px 1fr 300px;
+    align-items: center;
+    gap: 24px;
+    padding: 20px 36px;
+    background: #ffffff;
+    border-bottom: 1px solid #dce3ec;
+}
+
+.logo {
+    width: 280px;
+    display: block;
+}
+
+.logo img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.page-header h1 {
+    margin: 0;
+    text-align: center;
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.page-main {
+    flex: 1;
+    display: grid;
+    place-items: center;
+    padding: 48px 20px;
+}
+
+.hello-card {
+    width: min(100%, 680px);
+    padding: 36px;
+    background: #ffffff;
+    border: 1px solid #dce3ec;
+    border-radius: 8px;
+    box-shadow: 0 18px 44px rgba(31, 42, 68, 0.08);
+    text-align: center;
+}
+
+.eyebrow {
+    margin: 0 0 12px;
+    color: #56657a;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+.hello-card h2 {
+    margin: 0 0 18px;
+    color: #ef3124;
+    font-size: 40px;
+}
+
+.hello-card p {
+    margin: 12px 0;
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+button {
+    margin-top: 20px;
+    padding: 12px 22px;
+    color: #ffffff;
+    background: #202124;
+    border: 0;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #ef3124;
+}
+
+.page-footer {
+    padding: 22px;
+    color: #ffffff;
+    background: #202124;
+    text-align: center;
+    font-size: 16px;
+}
+
+@media (max-width: 760px) {
+    .page-header {
+        grid-template-columns: 1fr;
+        justify-items: center;
+        padding: 18px;
+    }
+
+    .logo {
+        width: min(100%, 320px);
+    }
+
+    .page-header h1 {
+        font-size: 22px;
+    }
+
+    .hello-card {
+        padding: 28px 18px;
+    }
+
+    .hello-card h2 {
+        font-size: 30px;
+    }
+}
