@@ -1,6 +1,6 @@
 <?php
 $title = 'Домашняя работа: Solve the equation';
-$equation = '6 / X = 2';
+$equation = '7 / X = 2';
 
 function parseExpression(string $expression): ?array
 {

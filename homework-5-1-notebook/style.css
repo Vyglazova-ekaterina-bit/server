@@ -1,0 +1,260 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    color: #1f2937;
+    background: #f4f7fb;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.page-header {
+    padding: 22px 24px 18px;
+    background: #ffffff;
+    border-bottom: 1px solid #dce3ec;
+    text-align: center;
+}
+
+.page-header h1 {
+    margin: 0 0 18px;
+    font-size: 28px;
+}
+
+.main-menu,
+.sort-menu,
+.record-links,
+.pagination {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.main-menu a,
+.sort-menu a,
+.record-links a,
+.pagination a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 40px;
+    padding: 10px 16px;
+    color: #ffffff;
+    background: #2563eb;
+    border: 2px solid transparent;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.sort-menu {
+    margin-top: 12px;
+}
+
+.sort-menu a {
+    min-height: 32px;
+    padding: 7px 12px;
+    font-size: 14px;
+}
+
+.main-menu a.active,
+.sort-menu a.active,
+.record-links a.current,
+.pagination a.active {
+    background: #dc2626;
+}
+
+.main-menu a:hover,
+.sort-menu a:hover,
+.record-links a:hover,
+.pagination a:hover {
+    border-color: #111827;
+}
+
+.page-main {
+    flex: 1;
+    width: min(100%, 1200px);
+    margin: 0 auto;
+    padding: 34px 18px 78px;
+}
+
+.panel {
+    padding: 28px;
+    background: #ffffff;
+    border: 1px solid #dce3ec;
+    border-radius: 8px;
+    box-shadow: 0 18px 44px rgba(31, 42, 68, 0.08);
+}
+
+.panel h2 {
+    margin: 0 0 20px;
+    text-align: center;
+}
+
+.table-wrap {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+}
+
+th,
+td {
+    padding: 10px;
+    border: 1px solid #d7e0ea;
+    text-align: left;
+    vertical-align: top;
+}
+
+th {
+    color: #ffffff;
+    background: #1f2937;
+}
+
+tbody tr:nth-child(even) {
+    background: #f8fafc;
+}
+
+.pagination {
+    margin-top: 20px;
+}
+
+.pagination a {
+    min-width: 42px;
+    padding: 8px 12px;
+}
+
+.contact-form {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px 20px;
+}
+
+.contact-form label {
+    display: grid;
+    gap: 7px;
+}
+
+.contact-form label.wide {
+    grid-column: 1 / -1;
+}
+
+.contact-form span {
+    color: #334155;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 11px 12px;
+    color: #202124;
+    background: #ffffff;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    font: inherit;
+}
+
+textarea {
+    resize: vertical;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: #ef3124;
+    outline: 2px solid rgba(239, 49, 36, 0.16);
+}
+
+.form-btn {
+    grid-column: 1 / -1;
+    min-height: 44px;
+    padding: 12px 18px;
+    color: #ffffff;
+    background: #202124;
+    border: 0;
+    border-radius: 6px;
+    font: 700 16px/1 Arial, Helvetica, sans-serif;
+    cursor: pointer;
+}
+
+.form-btn:hover {
+    background: #ef3124;
+}
+
+.success,
+.error,
+.empty,
+.errors {
+    margin: 0 0 18px;
+    padding: 12px 14px;
+    border-radius: 6px;
+}
+
+.success {
+    color: #0f5132;
+    background: #d1e7dd;
+}
+
+.error,
+.errors {
+    color: #842029;
+    background: #f8d7da;
+}
+
+.empty {
+    color: #334155;
+    background: #eef2f7;
+    text-align: center;
+}
+
+.record-links {
+    justify-content: flex-start;
+    margin-bottom: 20px;
+}
+
+.record-links a {
+    min-height: 34px;
+    padding: 8px 12px;
+    font-size: 14px;
+}
+
+.delete-links a {
+    background: #475569;
+}
+
+.page-footer {
+    padding: 18px;
+    color: #ffffff;
+    background: #202124;
+    text-align: center;
+}
+
+@media (max-width: 760px) {
+    .page-header h1 {
+        font-size: 22px;
+    }
+
+    .panel {
+        padding: 20px 14px;
+    }
+
+    .contact-form {
+        grid-template-columns: 1fr;
+    }
+
+    .main-menu,
+    .sort-menu {
+        align-items: stretch;
+        flex-direction: column;
+    }
+}
