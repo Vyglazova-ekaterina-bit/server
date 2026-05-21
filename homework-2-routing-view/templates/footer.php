@@ -5,7 +5,7 @@
             <ul>
                 <li><a href="/">Главная страница</a></li>
                 <li><a href="/hello/username">Приветствие</a></li>
-                <li><a href="/bye/username">Прощание</a></li>
+                <li><a href="/bye">Прощание</a></li>
             </ul>
         </td>
     </tr>

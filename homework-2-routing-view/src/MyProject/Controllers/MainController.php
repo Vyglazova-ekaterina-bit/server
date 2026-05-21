@@ -26,14 +26,22 @@ class MainController
 
     public function sayHello(string $name): void
     {
+        $_SESSION['name'] = $name;
+
         $this->view->renderHtml('main/hello.php', [
             'name' => $name,
             'title' => 'Страница приветствия',
         ]);
     }
 
-    public function sayBye(string $name): void
+    public function sayBye(?string $name = null): void
     {
+        if ($name !== null) {
+            $_SESSION['name'] = $name;
+        }
+
+        $name = $name ?? $_SESSION['name'] ?? 'гость';
+
         $this->view->renderHtml('main/bye.php', ['name' => $name]);
     }
 }
